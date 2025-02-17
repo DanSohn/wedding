@@ -1,5 +1,12 @@
+import image from './carina.jpg';
+
 function OurStoryPage() {
-  return <>Our Story</>;
+  return (
+    <>
+      <div>Our Story</div>
+      <img src={image} />
+    </>
+  );
 }
 
 export default OurStoryPage;
