@@ -20,12 +20,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true,
-
-    // Dist
-    "outDir": "./dist",
-    "declaration": true,
-    "declarationDir": "./dist/types"
+    "noUncheckedSideEffectImports": true
   },
   "include": ["src", "src/globals.d.ts"]
 }
