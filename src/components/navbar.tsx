@@ -17,7 +17,7 @@ const links: Link[] = [
 function NavBar() {
   console.log('displaying navbar');
   const navItems = links.map((link) => (
-    <a href={link.link} key={link.link}>
+    <a className={classes.navItem} href={link.link} key={link.link}>
       {link.label}
     </a>
   ));

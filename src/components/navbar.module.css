@@ -5,10 +5,19 @@
   height: 80px;
   width: 100%;
   margin-bottom: 12px;
-  background-color: white;
+  background-color: transparent;
   padding: 0 2rem;
 }
 
 .rsvpButton {
   height: 60px;
+  width: 120px;
+}
+
+.navItem {
+  margin: 0 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
 }
