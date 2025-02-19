@@ -1,4 +1,7 @@
-import { Box, Group } from '@mantine/core';
+import { Button, Group } from '@mantine/core';
+
+import NameCard from './namecard';
+import classes from './navbar.module.css';
 
 type Link = {
   link: string;
@@ -20,15 +23,15 @@ function NavBar() {
   ));
 
   return (
-    <Box>
-      <header>
-        <Group justify="space-between" h="100%">
-          <Group>{navItems}</Group>
-          <div> Helo world</div>
-          <div> RSVP </div>
-        </Group>
-      </header>
-    </Box>
+    <header className={classes.navbar}>
+      <Group justify="space-between" h="100%">
+        <Group gap="lg">{navItems}</Group>
+        <NameCard />
+        <Button className={classes.rsvpButton} component="a" href="/rsvp">
+          RSVP
+        </Button>
+      </Group>
+    </header>
   );
 }
 
