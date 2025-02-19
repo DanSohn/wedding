@@ -1,4 +1,4 @@
-import image from './carina.jpg';
+import image from 'assets/carina.jpg';
 
 function OurStoryPage() {
   return (

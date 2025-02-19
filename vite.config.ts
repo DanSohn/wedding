@@ -11,7 +11,13 @@ export default defineConfig({
       entry: resolve(__dirname, 'src/main.tsx'),
       name: 'CarinaDanielWeddingPlanning',
       formats: ['es'],
-      fileName: 'wedding',
+      fileName: 'index',
+    },
+  },
+  resolve: {
+    alias: {
+      assets: resolve(__dirname, './src/assets'),
+      pages: resolve(__dirname, './src/pages'),
     },
   },
 });
