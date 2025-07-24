@@ -1,3 +1,7 @@
 .radioButton {
   margin: 12px 0;
 }
+
+.container {
+  min-width: 720px;
+}

@@ -7,6 +7,7 @@ export default function RsvpPage() {
     <div className={classes.page}>
       <LandingImage src="/wedding_stock.jpg" />
       <h1>RSVP Page</h1>
+      <p>Please RSVP by June 30 2026</p>
       <RsvpForm />
     </div>
   );

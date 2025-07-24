@@ -1,5 +1,5 @@
 function NameCard() {
-  return <div>Carina and Daniel</div>;
+  return <div>Carina & Daniel</div>;
 }
 
 export default NameCard;
