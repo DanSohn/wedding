@@ -1,0 +1,13 @@
+.container {
+  width: 100%;
+  align-items: center;
+  position: absolute;
+  z-index: 0;
+  /* inset: 0; */
+}
+
+.image {
+  display: block;
+  height: auto;
+  width: 100%;
+}

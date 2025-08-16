@@ -1,4 +1,4 @@
-import LandingImage from '../components/landing-image';
+import LandingImage from '../components/generic/header/header-image';
 import RsvpForm from '../components/rsvp-form';
 import classes from './rsvp.module.css';
 

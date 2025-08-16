@@ -1,0 +1,40 @@
+.page {
+  max-width: 800px;
+  margin: 0 auto;
+  /* background-color: aqua; */
+  z-index: 10;
+  color: black;
+}
+
+.mainInfo {
+  padding: 48px 0;
+  /* background-color: rebeccapurple; */
+}
+.landingOverlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 2;
+  max-width: 90%;
+}
+
+.gratefulText {
+  margin-top: 24px;
+}
+
+.eventDetails {
+}
+.time {
+  text-align: right;
+}
+
+.rightSideDetails {
+  text-align: left;
+
+  > h3 {
+    margin-bottom: 12px;
+  }
+}

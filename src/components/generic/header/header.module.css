@@ -1,0 +1,25 @@
+.container {
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 180px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  margin-bottom: 24px;
+  /* display: block; */
+}
+
+.headerName {
+  font-size: 62px;
+  padding-bottom: 15px;
+}
+
+.dateLocation {
+  font-size: 21px;
+  margin: 8px 0;
+  letter-spacing: 2px;
+  color: #363536;
+}

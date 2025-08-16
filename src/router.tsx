@@ -1,9 +1,9 @@
-import { BrowserRouter, Route, Routes } from 'react-router';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router';
 
 import { AboutPage, HomePage, OurStoryPage, RsvpPage } from './pages';
 
 const routes = [
-  { path: '/', element: <HomePage /> },
+  { path: '/', element: <Navigate to="/home" replace /> },
   { path: '/home', element: <HomePage /> },
   { path: '/about', element: <AboutPage /> },
   { path: '/our-story', element: <OurStoryPage /> },
