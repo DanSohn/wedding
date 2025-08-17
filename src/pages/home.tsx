@@ -27,8 +27,8 @@ function HomePage() {
           <Title order={3}>3:00 PM - 10:30 PM</Title>
 
           <Text>Chiang Mai, Thailand</Text>
-          <Text>The Heritage House & Garden</Text>
-          <Text>120 Nam Phrae, Hang Dong District, Chiang Mai 50230, Thailand</Text>
+          <Text>Venue Name</Text>
+          <Text>Address of Venue</Text>
         </Stack>
         <Divider />
         <Stack>
@@ -38,7 +38,7 @@ function HomePage() {
             </Title>
             <EventDetails>
               <Title order={3}>Ceremony</Title>
-              <Text>The Heritage House & Garden</Text>
+              <Text>Venue Name</Text>
               <Text>Ceremony will begin promptly at 3:00 PM</Text>
             </EventDetails>
           </EventCard>
