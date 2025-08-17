@@ -1,7 +1,8 @@
 .container {
   text-transform: uppercase;
   height: 144px;
-  margin: 24px 0;
+  margin: 96px 0;
+  display: inline-block;
   /* display: flex;
   flex-direction: column;
   width: 100%;
@@ -12,4 +13,13 @@
   z-index: 1;
   margin-bottom: 24px;
   display: block; */
+}
+
+.divider {
+  --divider-color: var(--mantine-color-black);
+}
+
+.finalText {
+  margin-top: 48px;
+  font-size: 12px;
 }
