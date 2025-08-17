@@ -25,7 +25,9 @@
   margin-top: 24px;
 }
 
-.eventDetails {
+.eventCard {
+  padding: 16px 0;
+  gap: 48px;
 }
 .time {
   text-align: right;

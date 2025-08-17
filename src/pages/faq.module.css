@@ -1,0 +1,19 @@
+.page {
+  max-width: 800px;
+  margin: 0 auto;
+  z-index: 10;
+  color: black;
+}
+
+.accordionItem {
+  margin: 32px 0;
+}
+.title {
+  justify-content: center;
+  text-align: center;
+  font-size: 28px;
+}
+
+.question {
+  margin-bottom: 24px;
+}

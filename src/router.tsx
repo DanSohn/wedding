@@ -1,6 +1,6 @@
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router';
 
-import { AboutPage, HomePage, OurStoryPage, RsvpPage } from './pages';
+import { AboutPage, FaqPage, HomePage, OurStoryPage, RsvpPage } from './pages';
 
 const routes = [
   { path: '/', element: <Navigate to="/home" replace /> },
@@ -8,6 +8,7 @@ const routes = [
   { path: '/about', element: <AboutPage /> },
   { path: '/our-story', element: <OurStoryPage /> },
   { path: '/rsvp', element: <RsvpPage /> },
+  { path: '/faq', element: <FaqPage /> },
 ];
 export default function Router() {
   return (

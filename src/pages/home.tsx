@@ -2,7 +2,7 @@ import { Divider, Group, Stack, Text, Title } from '@mantine/core';
 import classes from './home.module.css';
 
 const EventCard = ({ children }: { children: React.ReactNode }) => (
-  <Group justify="center" grow={true} gap="xl" align="flex-start" className={classes.eventDetails}>
+  <Group justify="center" grow={true} align="flex-start" className={classes.eventCard}>
     {children}
   </Group>
 );
