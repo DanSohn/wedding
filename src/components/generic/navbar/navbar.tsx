@@ -9,7 +9,6 @@ type Link = {
 
 const links: Link[] = [
   { link: '/home', label: 'Home' },
-  { link: '/about', label: 'About' },
   { link: '/our-story', label: 'Our Story' },
   { link: '/registry', label: 'Registry' },
   { link: '/faq', label: 'Q + A' },

@@ -30,28 +30,12 @@ const faqItems = [
       {
         question: 'Where should I stay?',
         answer:
-          'We have a room block reserved at [Hotel Name]. We recommend booking early to guarantee availability.',
+          'There are several hotels and resorts in and around Chiang Mai. We recommend booking early to secure your preferred accommodation.',
       },
       {
-        question: 'Are there other nearby hotels or Airbnb options?',
+        question: 'Are there other nearby hotels?',
         answer:
           'Yes, there are plenty of accommodations nearby at different budgets, ranging from boutique resorts to private villas.',
-      },
-    ],
-  },
-  {
-    title: 'Wedding Events',
-    emoji: '💒',
-    questions: [
-      {
-        question: 'What events should I plan to attend?',
-        answer:
-          'The wedding ceremony and reception will be on November 22 2026. We’ll also host a welcome dinner the evening before and a farewell brunch the following day.',
-      },
-      {
-        question: 'What is the dress code?',
-        answer:
-          'The ceremony and reception will be semi-formal (light suits, dresses, or tropical cocktail attire). Lightweight fabrics are encouraged due to the warm climate.',
       },
     ],
   },
@@ -67,7 +51,7 @@ const faqItems = [
       {
         question: 'Do I need a visa to travel to Thailand?',
         answer:
-          'Many countries, including Canada and the US, can enter Thailand without a visa for short stays. Please confirm requirements for your passport country.',
+          'Many countries, including Canada, Hong Kong and the US, can enter Thailand without a visa for short stays. Please confirm requirements for your passport country.',
       },
       {
         question: 'Are there activities to do nearby?',
@@ -88,7 +72,7 @@ const faqItems = [
       {
         question: 'What’s the best way to contact you with questions?',
         answer:
-          'You can reach us by email at [your email] or through the contact form on this website.',
+          'You can reach us by email at carinaxdaniel@gmail.com or through the contact form on this website.',
       },
       {
         question: 'Can I bring a plus one?',
@@ -97,7 +81,7 @@ const faqItems = [
       {
         question: 'What gifts should we bring?',
         answer:
-          'Your presence is the best gift! Since we are traveling, we kindly ask no boxed gifts. Contributions to our honeymoon fund are welcome.',
+          'Your presence is the best gift! If you would like to extend your generosity further, we’ve registered with <Vendor name>, or if you’d like to contribute to our honeymoon fund, we would be grateful!',
       },
     ],
   },
