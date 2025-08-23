@@ -74,7 +74,7 @@ export default function RsvpForm() {
             name="user.fullName"
             control={control}
             render={({ field }) => (
-              <TextInput {...field} label="Full Name" placeholder="Daniel Sohn" />
+              <TextInput {...field} label="Full Name" placeholder="Daniel Sohn" size="md" />
             )}
           />
           <Controller
@@ -86,6 +86,7 @@ export default function RsvpForm() {
                 className={classes.fullWidth}
                 label="Email"
                 placeholder="daniel.sohn@gmail.com"
+                size="md"
               />
             )}
           />
@@ -94,17 +95,24 @@ export default function RsvpForm() {
             name="isAttending"
             control={control}
             render={({ field: { onChange, value } }) => (
-              <Radio.Group value={value} onChange={onChange} label="Will you be attending?">
+              <Radio.Group
+                value={value}
+                onChange={onChange}
+                label="Will you be attending?"
+                size="md"
+              >
                 <Group justify="flex-start" grow>
                   <Radio
                     className={classes.radioButton}
                     value={Attendance.Yes}
                     label="Joyfully Accepts"
+                    size="md"
                   />
                   <Radio
                     className={classes.radioButton}
                     value={Attendance.No}
                     label="Regretfully Declines"
+                    size="md"
                   />
                 </Group>
               </Radio.Group>
@@ -117,17 +125,24 @@ export default function RsvpForm() {
                 name="isBringingGuest"
                 control={control}
                 render={({ field: { onChange, value } }) => (
-                  <Radio.Group value={value} onChange={onChange} label="Will you be bringing a +1?">
+                  <Radio.Group
+                    value={value}
+                    onChange={onChange}
+                    label="Will you be bringing a +1?"
+                    size="md"
+                  >
                     <Group justify="flex-start" grow>
                       <Radio
                         className={classes.radioButton}
                         value={IsBringingGuest.Yes}
                         label="Yes"
+                        size="md"
                       />
                       <Radio
                         className={classes.radioButton}
                         value={IsBringingGuest.No}
                         label="No"
+                        size="md"
                       />
                     </Group>
                   </Radio.Group>
@@ -140,7 +155,12 @@ export default function RsvpForm() {
                     name="guest.fullName"
                     control={control}
                     render={({ field }) => (
-                      <TextInput {...field} label="Guest's Full Name" placeholder="Phil" />
+                      <TextInput
+                        {...field}
+                        label="Guest's Full Name"
+                        placeholder="Phil"
+                        size="md"
+                      />
                     )}
                   />
                   <Controller
@@ -151,6 +171,7 @@ export default function RsvpForm() {
                         {...field}
                         label="Guest email"
                         placeholder="bob.the.builder98@gmail.com"
+                        size="md"
                       />
                     )}
                   />
@@ -165,29 +186,24 @@ export default function RsvpForm() {
                     value={value}
                     onChange={onChange}
                     label="Which events will you be attending?"
+                    size="md"
                   >
                     <Stack justify="space-around" gap="md">
-                      <Checkbox value={WeddingEvents.WelcomeParty} label="Welcome Party" />
+                      <Checkbox
+                        value={WeddingEvents.WelcomeParty}
+                        label="Welcome Party"
+                        size="md"
+                      />
                       <Checkbox
                         value={WeddingEvents.Ceremony_And_Reception}
                         label="Ceremony and Reception"
                         disabled
+                        size="md"
                       />
-                      <Checkbox value={WeddingEvents.Excursion_One} label="Excursion 1" />
-                      <Checkbox value={WeddingEvents.Excursion_Two} label="Excursion 2" />
+                      <Checkbox value={WeddingEvents.Excursion_One} label="Excursion 1" size="md" />
+                      <Checkbox value={WeddingEvents.Excursion_Two} label="Excursion 2" size="md" />
                     </Stack>
                   </Checkbox.Group>
-                )}
-              />
-              <Controller
-                name="comments"
-                control={control}
-                render={({ field }) => (
-                  <Textarea
-                    {...field}
-                    label="Questions or Comments"
-                    placeholder="Let us know if there's anything on your mind"
-                  />
                 )}
               />
 
@@ -199,6 +215,20 @@ export default function RsvpForm() {
                     {...field}
                     label="Do you have any dietary restrictions?"
                     placeholder="Vegan, vegetarian, allergies, etc."
+                    size="md"
+                  />
+                )}
+              />
+
+              <Controller
+                name="comments"
+                control={control}
+                render={({ field }) => (
+                  <Textarea
+                    {...field}
+                    label="Questions or Comments"
+                    placeholder="Let us know if there's anything on your mind"
+                    size="md"
                   />
                 )}
               />
