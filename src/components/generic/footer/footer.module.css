@@ -1,7 +1,7 @@
 .container {
   text-transform: uppercase;
   height: 144px;
-  margin: 96px 0;
+  margin: 96px 0 48px;
   display: inline-block;
   /* display: flex;
   flex-direction: column;

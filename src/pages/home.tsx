@@ -15,7 +15,7 @@ function HomePage() {
   return (
     <div className={classes.page}>
       <Group justify="center" className={classes.mainInfo}>
-        <Title order={1}>November 22, 2026</Title>
+        <Title order={1}>November 23, 2026</Title>
         <Divider orientation="vertical" />
         <Title order={1}>Chiang Mai Thailand</Title>
       </Group>
@@ -23,7 +23,7 @@ function HomePage() {
       <Stack>
         <Stack>
           <Title order={1}>Wedding Day</Title>
-          <Title order={2}>Sunday November 22, 2026</Title>
+          <Title order={2}>Monday November 23, 2026</Title>
           <Title order={3}>3:00 PM - 10:30 PM</Title>
 
           <Text>Chiang Mai, Thailand</Text>
