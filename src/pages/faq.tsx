@@ -18,7 +18,7 @@ const faqItems = [
       {
         question: 'Which airport should I fly into?',
         answer:
-          'The closest major airport is Chiang Mai International Airport (CNX). From there, you can take a taxi to the city, or rent a scooter.',
+          'The closest major airport is Chiang Mai International Airport (CNX). From there, you can take a taxi to the city, or rent a scooter if you’re adventurous!',
       },
       {
         question: 'Will transportation be provided from the airport to the hotel/venue?',
@@ -35,6 +35,11 @@ const faqItems = [
         question: 'Where should I stay?',
         answer:
           'There are several hotels and resorts in and around Chiang Mai. We recommend booking early to secure your preferred accommodation.',
+      },
+      {
+        question: 'Will there be a room block for guests?',
+        answer:
+          'We are currently discussing with Flora Creek in Chiang Mai to have a room block at a discounted rate. More details to come.',
       },
       {
         question: 'Are there other nearby hotels?',
