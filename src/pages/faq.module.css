@@ -14,6 +14,18 @@
   font-size: 28px;
 }
 
+/* Make emoji icons monochrome (black & white) and size/align them */
+.icon {
+  display: inline-block;
+  line-height: 1;
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+  /* Try to force monochrome rendering: remove color saturation and reduce brightness */
+  filter: grayscale(100%) saturate(0) contrast(100%) brightness(0.2);
+  /* Prefer symbol fonts that render glyphs in single color when available */
+  font-family: 'Segoe UI Symbol', 'Apple Color Emoji', 'Noto Color Emoji', sans-serif;
+}
+
 .question {
   margin-bottom: 24px;
 }

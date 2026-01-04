@@ -1,10 +1,14 @@
 import { Accordion, Text, Title } from '@mantine/core';
+import { IconHome2, IconMapPin, IconPlane, IconQuestionMark } from '@tabler/icons-react';
 import classes from './faq.module.css';
+
+const ICON_SIZE = 22;
+const ICON_STROKE = 1.5;
 
 const faqItems = [
   {
     title: 'Travel & Flights',
-    emoji: '✈️',
+    icon: <IconPlane size={ICON_SIZE} stroke={ICON_STROKE} color="var(--mantine-color-dimmed)" />,
     questions: [
       {
         question: 'When should I book my flights?',
@@ -25,7 +29,7 @@ const faqItems = [
   },
   {
     title: 'Accommodation',
-    emoji: '🏨',
+    icon: <IconHome2 size={ICON_SIZE} stroke={ICON_STROKE} color="var(--mantine-color-dimmed)" />,
     questions: [
       {
         question: 'Where should I stay?',
@@ -41,7 +45,7 @@ const faqItems = [
   },
   {
     title: 'Destination Tips',
-    emoji: '🌴',
+    icon: <IconMapPin size={ICON_SIZE} stroke={ICON_STROKE} color="var(--mantine-color-dimmed)" />,
     questions: [
       {
         question: 'What will the weather be like in November?',
@@ -62,7 +66,9 @@ const faqItems = [
   },
   {
     title: 'Other Details',
-    emoji: '❓',
+    icon: (
+      <IconQuestionMark size={ICON_SIZE} stroke={ICON_STROKE} color="var(--mantine-color-dimmed)" />
+    ),
     questions: [
       {
         question: 'Are kids welcome?',
@@ -92,7 +98,15 @@ const titles = faqItems.map((section) => section.title);
 export default function FaqPage() {
   const items = faqItems.map((section) => (
     <Accordion.Item key={section.title} value={section.title}>
-      <Accordion.Control icon={section.emoji}>{section.title}</Accordion.Control>
+      <Accordion.Control
+        icon={
+          <span className={classes.icon} aria-hidden>
+            {section.icon}
+          </span>
+        }
+      >
+        {section.title}
+      </Accordion.Control>
       <Accordion.Panel>
         {section.questions.map((question) => (
           <div key={question.question} className={classes.question}>

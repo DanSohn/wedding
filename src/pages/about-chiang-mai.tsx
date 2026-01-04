@@ -23,7 +23,7 @@ const sections = [
 
           Whether it’s hiking through lush forests, taking a hot-air balloon ride at sunrise, or simply watching the clouds roll across \
           the hills, Chiang Mai’s nature invites you to slow down, breathe deeply, and marvel at the beauty of the world.`,
-    image: '/chiang-mai-elephants.jpeg',
+    image: 'chiang-mai-elephants.jpeg',
     bg: 'rgba(255, 245, 240, 0.8)', // blush
   },
   {
@@ -36,7 +36,7 @@ const sections = [
 
         And then there are the moments that can’t be captured on a postcard: releasing a lantern into the sky, sharing laughter with friends \
         at a market table, or watching the sun set over the mountains. These are the memories that linger long after you’ve returned home—and we’re so excited to share them with you.`,
-    image: '/chiang-mai-night-market.jpeg',
+    image: 'chiang-mai-night-market.jpeg',
     bg: 'rgba(250, 250, 250, 0.9)', // ivory
   },
 ];
