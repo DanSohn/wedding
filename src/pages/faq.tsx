@@ -85,9 +85,9 @@ const faqItems = [
         answer: 'Please check your invitation — if your guest’s name is included, then yes!',
       },
       {
-        question: 'What gifts should we bring?',
+        question: 'Are there any vaccinations that I need to get before traveling to Thailand?',
         answer:
-          'Your presence is the best gift! If you would like to extend your generosity further, we’ve registered with <Vendor name>, or if you’d like to contribute to our honeymoon fund, we would be grateful!',
+          'It is recommended to be up-to-date on routine vaccines, and consider vaccines for Hepatitis A and Typhoid. Please consult your healthcare provider at least 2 months before flying for personalized advice.',
       },
     ],
   },
