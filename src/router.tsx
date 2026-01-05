@@ -1,4 +1,4 @@
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router';
+import { Navigate, Route, Routes } from 'react-router';
 
 import {
   AboutChiangMaiPage,
@@ -21,12 +21,10 @@ const routes = [
 ];
 export default function Router() {
   return (
-    <BrowserRouter>
-      <Routes>
-        {routes.map((route, index) => (
-          <Route key={index} {...route} />
-        ))}
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      {routes.map((route, index) => (
+        <Route key={index} {...route} />
+      ))}
+    </Routes>
   );
 }
