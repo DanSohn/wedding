@@ -10,7 +10,6 @@ type Link = {
 const links: Link[] = [
   { link: '/home', label: 'Home' },
   { link: '/our-story', label: 'Our Story' },
-  { link: '/registry', label: 'Registry' },
   { link: '/faq', label: 'Q + A' },
   { link: '/about-chiang-mai', label: 'About Chiang Mai' },
   { link: '/rsvp', label: 'RSVP' },
