@@ -21,8 +21,8 @@ function OurStoryPage() {
 
           <Grid.Col span={{ base: 12, sm: 5 }}>
             <Image
-              src="carina-daniel-kiss.jpg"
-              alt="Carina and Daniel with Yumi"
+              src="carina-daniel-look-each-other.jpg"
+              alt="Carina and Daniel on dates"
               radius="md"
               fit="cover"
             />
@@ -33,8 +33,8 @@ function OurStoryPage() {
         <Grid gutter="xl" align="center">
           <Grid.Col span={{ base: 12, sm: 5 }}>
             <Image
-              src="carina-daniel-yumi.jpg"
-              alt="Carina and Daniel with Yumi"
+              src="carina-daniel-travel.jpg"
+              alt="Carina and Daniel travelling"
               radius="md"
               fit="cover"
             />
@@ -64,8 +64,8 @@ function OurStoryPage() {
 
           <Grid.Col span={{ base: 12, sm: 5 }}>
             <Image
-              src="carina-daniel-look-back.jpg"
-              alt="Carina and Daniel with Yumi"
+              src="carina-daniel-home.jpg"
+              alt="Carina and Daniel with Yumi and new house"
               radius="md"
               fit="cover"
             />
@@ -76,8 +76,8 @@ function OurStoryPage() {
         <Grid gutter="xl" align="center">
           <Grid.Col span={{ base: 12, sm: 5 }}>
             <Image
-              src="carina-daniel-rings.jpg"
-              alt="Carina and Daniel with Yumi"
+              src="carina-daniel-engage.jpg"
+              alt="Carina and Daniel engagement"
               radius="md"
               fit="cover"
             />
