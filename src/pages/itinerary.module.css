@@ -12,3 +12,12 @@
   margin-top: 12px;
   color: var(--mantine-color-dimmed);
 }
+
+.eventCard {
+  padding: 16px 0;
+  gap: 48px;
+}
+
+.mainInfo {
+  padding: 48px 0;
+}

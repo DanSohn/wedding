@@ -1,15 +1,15 @@
-import { Divider, Group, Stack, Text, Title } from '@mantine/core';
+import { Divider, Group, Text, Title } from '@mantine/core';
 import classes from './itinerary.module.css';
 
-const EventCard = ({ children }: { children: React.ReactNode }) => (
-  <Group justify="center" grow={true} align="flex-start" className={classes.eventCard}>
-    {children}
-  </Group>
-);
+// const EventCard = ({ children }: { children: React.ReactNode }) => (
+//   <Group justify="center" grow={true} align="flex-start" className={classes.eventCard}>
+//     {children}
+//   </Group>
+// );
 
-const EventDetails = ({ children }: { children: React.ReactNode }) => (
-  <div className={classes.rightSideDetails}>{children}</div>
-);
+// const EventDetails = ({ children }: { children: React.ReactNode }) => (
+//   <div className={classes.rightSideDetails}>{children}</div>
+// );
 
 export default function ItineraryPage() {
   return (
@@ -17,12 +17,29 @@ export default function ItineraryPage() {
       <Title order={2}>Itinerary</Title>
       <Text className={classes.placeholder}>Schedule details coming soon.</Text>
       <Group justify="center" className={classes.mainInfo}>
-        <Title order={1}>November 23, 2026</Title>
+        <Title order={1}>November 21</Title>
         <Divider orientation="vertical" />
-        <Title order={1}>Chiang Mai Thailand</Title>
+        <Title order={1}>Welcome Party</Title>
       </Group>
 
-      <Stack>
+      <Group justify="center" className={classes.mainInfo}>
+        <Title order={1}>November 23</Title>
+        <Divider orientation="vertical" />
+        <Title order={1}>Wedding Ceremony</Title>
+      </Group>
+
+      <Group justify="center" className={classes.mainInfo}>
+        <Title order={1}>November 24</Title>
+        <Divider orientation="vertical" />
+        <Title order={1}>Excursion 1 (TBD) OR Lantern Festival</Title>
+      </Group>
+      <Group justify="center" className={classes.mainInfo}>
+        <Title order={1}>November 25</Title>
+        <Divider orientation="vertical" />
+        <Title order={1}>Lantern Festival</Title>
+      </Group>
+
+      {/* <Stack>
         <Stack>
           <Title order={1}>Wedding Day</Title>
           <Title order={2}>Monday November 23, 2026</Title>
@@ -75,7 +92,7 @@ export default function ItineraryPage() {
         </Stack>
 
         <Divider />
-      </Stack>
+      </Stack> */}
     </div>
   );
 }
