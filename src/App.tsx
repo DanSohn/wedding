@@ -19,7 +19,6 @@ export default function App() {
         <div className={classes.wrapper}>
           <LogoHeader />
           <div className={classes.headerContainer}>
-            {/* <HeaderImage /> */}
             <Header />
             <NavBar />
           </div>

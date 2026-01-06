@@ -13,3 +13,13 @@
   margin-top: 12px;
   color: var(--mantine-color-dimmed);
 }
+
+.question {
+  margin-bottom: 24px;
+}
+
+.title {
+  justify-content: center;
+  text-align: center;
+  font-size: 28px;
+}

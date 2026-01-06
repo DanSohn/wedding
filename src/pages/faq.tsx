@@ -52,6 +52,11 @@ const faqItems = [
         answer:
           'It is recommended to be up-to-date on routine vaccines, and consider vaccines for Hepatitis A and Typhoid. Please consult your healthcare provider at least 2 months before flying for personalized advice.',
       },
+      {
+        question: 'Is there a registry?',
+        answer:
+          'YOUR PRESENCE IS THE GREATEST GIFT OF ALL uwu SO ITS A-OKAY. if you REALLLY want to, you can e-transfer us at sohnjhyun@gmail.com or carinanvm don’t do it don’t give her money.',
+      },
     ],
   },
 ];

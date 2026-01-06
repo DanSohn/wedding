@@ -15,28 +15,32 @@ export default function ItineraryPage() {
   return (
     <div className={classes.page}>
       <Title order={2}>Itinerary</Title>
-      <Text className={classes.placeholder}>Schedule details coming soon.</Text>
+      <Text className={classes.placeholder}>More scheduling details coming soon.</Text>
+      <Text>
+        Note that the excursions are optional! Feel free to go explore on your own or visit other
+        countries after the wedding, but we would love to have you join us and spend time together.
+      </Text>
       <Group justify="center" className={classes.mainInfo}>
-        <Title order={1}>November 21</Title>
+        <Title order={2}>November 21</Title>
         <Divider orientation="vertical" />
-        <Title order={1}>Welcome Party</Title>
+        <Title order={2}>Welcome Party</Title>
       </Group>
 
       <Group justify="center" className={classes.mainInfo}>
-        <Title order={1}>November 23</Title>
+        <Title order={2}>November 23</Title>
         <Divider orientation="vertical" />
-        <Title order={1}>Wedding Ceremony</Title>
+        <Title order={2}>Wedding Ceremony</Title>
       </Group>
 
       <Group justify="center" className={classes.mainInfo}>
-        <Title order={1}>November 24</Title>
+        <Title order={2}>November 24</Title>
         <Divider orientation="vertical" />
-        <Title order={1}>Excursion 1 (TBD) OR Lantern Festival</Title>
+        <Title order={2}>Excursion 1 (TBD)</Title>
       </Group>
       <Group justify="center" className={classes.mainInfo}>
-        <Title order={1}>November 25</Title>
+        <Title order={2}>November 25</Title>
         <Divider orientation="vertical" />
-        <Title order={1}>Lantern Festival</Title>
+        <Title order={2}>Excursion 2: Lantern Festival</Title>
       </Group>
 
       {/* <Stack>

@@ -34,17 +34,13 @@ const faqItems = [
       {
         question: 'Where should I stay?',
         answer:
-          'There are several hotels and resorts in and around Chiang Mai. We recommend booking early to secure your preferred accommodation.',
+          'We recommend guests to stay at Flora Creek with us, and we are currently discussing with them for a group discounted rate. \
+          More information on that will be provided once figured out. However, there are still several hotels and resorts in and \
+          around Chiang Mai that are amazingly beautiful and convenient.',
       },
       {
-        question: 'Will there be a room block for guests?',
-        answer:
-          'We are currently discussing with Flora Creek in Chiang Mai to have a room block at a discounted rate. More details to come.',
-      },
-      {
-        question: 'Are there other nearby hotels?',
-        answer:
-          'Yes, there are plenty of accommodations nearby at different budgets, ranging from boutique resorts to private villas.',
+        question: 'When should we book?',
+        answer: 'We recommend booking early to secure your preferred accommodation.',
       },
     ],
   },
