@@ -20,7 +20,7 @@ function HomePage() {
         square!!! (haha jk unless 👀🔪)
       </Text>
       <Image
-        src="carina-daniel-yumi.jpg"
+        src="carina-daniel-sidewalk-yumi-maya.jpg"
         alt="Carina and Daniel with Yumi"
         radius="md"
         fit="cover"
