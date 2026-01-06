@@ -201,7 +201,11 @@ export default function RsvpForm() {
                         size="md"
                       />
                       <Checkbox value={WeddingEvents.Excursion_One} label="Excursion 1" size="md" />
-                      <Checkbox value={WeddingEvents.Excursion_Two} label="Excursion 2" size="md" />
+                      <Checkbox
+                        value={WeddingEvents.Excursion_Two}
+                        label="Lantern Festival (Please add in comments whether you would prefer Nov 24 or Nov 25. Tickets sell out quick!)"
+                        size="md"
+                      />
                     </Stack>
                   </Checkbox.Group>
                 )}

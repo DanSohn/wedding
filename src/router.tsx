@@ -1,6 +1,15 @@
 import { Navigate, Route, Routes } from 'react-router';
 
-import { AboutChiangMaiPage, FaqPage, HomePage, OurStoryPage, RsvpPage } from './pages';
+import {
+  AboutChiangMaiPage,
+  FaqPage,
+  HomePage,
+  OurStoryPage,
+  RsvpPage,
+  DressCodePage,
+  TravelAccommodationPage,
+  ItineraryPage,
+} from './pages';
 
 const routes = [
   { path: '/', element: <Navigate to="/home" replace /> },
@@ -9,6 +18,9 @@ const routes = [
   { path: '/rsvp', element: <RsvpPage /> },
   { path: '/faq', element: <FaqPage /> },
   { path: '/about-chiang-mai', element: <AboutChiangMaiPage /> },
+  { path: '/dress-code', element: <DressCodePage /> },
+  { path: '/travel-accommodation', element: <TravelAccommodationPage /> },
+  { path: '/itinerary', element: <ItineraryPage /> },
   { path: '*', element: <Navigate to="/home" replace /> }, // Redirect any unknown paths to homea
 ];
 export default function Router() {

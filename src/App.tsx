@@ -16,14 +16,16 @@ export default function App() {
   return (
     <MantineProvider theme={theme}>
       <BrowserRouter>
-        <LogoHeader />
-        <div className={classes.headerContainer}>
-          {/* <HeaderImage /> */}
-          <Header />
-          <NavBar />
-        </div>
-        <div className={classes.content}>
-          <Router />
+        <div className={classes.wrapper}>
+          <LogoHeader />
+          <div className={classes.headerContainer}>
+            {/* <HeaderImage /> */}
+            <Header />
+            <NavBar />
+          </div>
+          <div className={classes.content}>
+            <Router />
+          </div>
           <Footer />
         </div>
       </BrowserRouter>
