@@ -8,21 +8,18 @@ import {
   Textarea,
   TextInput,
 } from '@mantine/core';
-import { useEffect } from 'react';
+import { useState } from 'react';
 import { Controller, SubmitHandler, useForm } from 'react-hook-form';
+import { Slide, toast, ToastContainer } from 'react-toastify';
 import classes from './rsvp-form.module.css';
 type Inputs = {
   isAttending: Attendance;
-  user: {
-    fullName: string;
-    email: string;
-  };
+  fullName: string;
+  email: string;
   isBringingGuest: IsBringingGuest;
-  guest?: {
-    fullName: string;
-    email: string;
-  };
-  events: string[];
+  guestFullName: string;
+  guestEmail: string;
+  events?: string[];
   dietaryRestrictions?: string;
   comments?: string;
 };
@@ -41,7 +38,7 @@ enum WeddingEvents {
   WelcomeParty = 'WELCOME_PARTY',
   Ceremony_And_Reception = 'CEREMONY_AND_RECEPTION',
   Excursion_One = 'EXCURSION_ONE',
-  Excursion_Two = 'EXCURSION_TWO',
+  LanternFestival = 'LANTERN_FESTIVAL',
 }
 
 const defaultValues = {
@@ -53,17 +50,74 @@ export default function RsvpForm() {
     defaultValues,
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const showConditionalGuestFields = watch('isBringingGuest') === IsBringingGuest.Yes;
   const showFullForm = watch('isAttending') === Attendance.Yes;
 
-  // add page on load to check if user has already submitted an RSVP
-  useEffect(() => {
-    // Check if user has already submitted an RSVP
-  }, []);
+  const validateFormData = (data: Inputs) => {
+    if (!data.fullName) {
+      toast.error('Full name is required');
+    }
 
-  const onSubmit: SubmitHandler<Inputs> = (data) => {
-    console.log(data);
-    // Add cookie stating that they've already submitted an RSVP
+    if (!data.email) {
+      toast.error('Email is required');
+    }
+
+    if (data.isBringingGuest === undefined) {
+      toast.error('Please indicate if you are bringing a guest');
+    }
+
+    return false;
+  };
+
+  const onSubmit: SubmitHandler<Inputs> = async (data) => {
+    if (isSubmitting) return;
+
+    const isValid = validateFormData(data);
+
+    if (!isValid) return;
+
+    const payload = {
+      fullName: data.fullName,
+      email: data.email,
+      isAttending: data.isAttending,
+      isBringingGuest: data.isBringingGuest ?? 'NO',
+      guestFullName: data.guestFullName || '',
+      guestEmail: data.guestEmail || '',
+      dietaryRestrictions: data.dietaryRestrictions || '',
+      comments: data.comments || '',
+      isAttendingWelcomeParty: Boolean(
+        data.events?.includes(WeddingEvents.WelcomeParty),
+      ).toString(),
+      isAttendingExcursionOne: Boolean(
+        data.events?.includes(WeddingEvents.Excursion_One),
+      ).toString(),
+      isAttendingLanternFestival: Boolean(
+        data.events?.includes(WeddingEvents.LanternFestival),
+      ).toString(),
+    };
+
+    const queryParams = new URLSearchParams(payload).toString();
+    console.log('RSVP payload', payload);
+    try {
+      setIsSubmitting(true);
+      const res = await fetch(
+        `https://script.google.com/macros/s/AKfycbyS6IhLv-tifG_0YLgyEC9y88Mk-UT43h5OM_1pZ23IG09mFiVkTEIPrdHRL3fP1RGNvQ/exec?${queryParams}`,
+        {
+          method: 'POST',
+          // body: JSON.stringify(payload),
+        },
+      );
+      const resData = await res.json();
+      console.log('RSVP res', resData);
+      toast.success('Form submitted successfully!');
+    } catch (err) {
+      console.error('Error submitting RSVP:', err);
+      toast.error('There was an error submitting the form. Text Daniel that he sucks at his job');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -71,14 +125,20 @@ export default function RsvpForm() {
       <form onSubmit={handleSubmit(onSubmit)}>
         <Stack align="stretch" justify="flex-start" gap="md">
           <Controller
-            name="user.fullName"
+            name="fullName"
             control={control}
             render={({ field }) => (
-              <TextInput {...field} label="Full Name" placeholder="Daniel Sohn" size="md" />
+              <TextInput
+                {...field}
+                label="Full Name"
+                placeholder="Daniel Sohn"
+                size="md"
+                required
+              />
             )}
           />
           <Controller
-            name="user.email"
+            name="email"
             control={control}
             render={({ field }) => (
               <TextInput
@@ -87,6 +147,7 @@ export default function RsvpForm() {
                 label="Email"
                 placeholder="daniel.sohn@gmail.com"
                 size="md"
+                required
               />
             )}
           />
@@ -100,6 +161,7 @@ export default function RsvpForm() {
                 onChange={onChange}
                 label="Will you be attending?"
                 size="md"
+                required
               >
                 <Group justify="flex-start" grow>
                   <Radio
@@ -152,7 +214,7 @@ export default function RsvpForm() {
               {showConditionalGuestFields && (
                 <>
                   <Controller
-                    name="guest.fullName"
+                    name="guestFullName"
                     control={control}
                     render={({ field }) => (
                       <TextInput
@@ -164,7 +226,7 @@ export default function RsvpForm() {
                     )}
                   />
                   <Controller
-                    name="guest.email"
+                    name="guestEmail"
                     control={control}
                     render={({ field }) => (
                       <TextInput
@@ -202,7 +264,7 @@ export default function RsvpForm() {
                       />
                       <Checkbox value={WeddingEvents.Excursion_One} label="Excursion 1" size="md" />
                       <Checkbox
-                        value={WeddingEvents.Excursion_Two}
+                        value={WeddingEvents.LanternFestival}
                         label="Lantern Festival (Please add in comments whether you would prefer Nov 24 or Nov 25. Tickets sell out quick!)"
                         size="md"
                       />
@@ -223,25 +285,34 @@ export default function RsvpForm() {
                   />
                 )}
               />
-
-              <Controller
-                name="comments"
-                control={control}
-                render={({ field }) => (
-                  <Textarea
-                    {...field}
-                    label="Questions or Comments"
-                    placeholder="Let us know if there's anything on your mind"
-                    size="md"
-                  />
-                )}
-              />
             </>
           )}
 
-          <Button type="submit">Submit</Button>
+          <Controller
+            name="comments"
+            control={control}
+            render={({ field }) => (
+              <Textarea
+                {...field}
+                label="Questions or Comments"
+                placeholder="Let us know if there's anything on your mind"
+                size="md"
+              />
+            )}
+          />
+
+          <Button type="submit" loading={isSubmitting}>
+            Submit
+          </Button>
         </Stack>
       </form>
+      <ToastContainer
+        position="bottom-center"
+        theme="colored"
+        pauseOnFocusLoss={false}
+        pauseOnHover={false}
+        transition={Slide}
+      />
     </Container>
   );
 }
