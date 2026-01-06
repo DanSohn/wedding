@@ -56,19 +56,23 @@ export default function RsvpForm() {
   const showFullForm = watch('isAttending') === Attendance.Yes;
 
   const validateFormData = (data: Inputs) => {
+    let hasError = false;
     if (!data.fullName) {
       toast.error('Full name is required');
+      hasError = true;
     }
 
     if (!data.email) {
       toast.error('Email is required');
+      hasError = true;
     }
 
     if (data.isBringingGuest === undefined) {
       toast.error('Please indicate if you are bringing a guest');
+      hasError = true;
     }
 
-    return false;
+    return !hasError;
   };
 
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
@@ -262,12 +266,12 @@ export default function RsvpForm() {
                         disabled
                         size="md"
                       />
-                      <Checkbox value={WeddingEvents.Excursion_One} label="Excursion 1" size="md" />
+                      {/* <Checkbox value={WeddingEvents.Excursion_One} label="Excursion 1" size="md" />
                       <Checkbox
                         value={WeddingEvents.LanternFestival}
-                        label="Lantern Festival (Please add in comments whether you would prefer Nov 24 or Nov 25. Tickets sell out quick!)"
+                        label="Lantern Festival"
                         size="md"
-                      />
+                      /> */}
                     </Stack>
                   </Checkbox.Group>
                 )}

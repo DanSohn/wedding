@@ -14,12 +14,8 @@ import classes from './itinerary.module.css';
 export default function ItineraryPage() {
   return (
     <div className={classes.page}>
-      <Title order={2}>Itinerary</Title>
-      <Text className={classes.placeholder}>More scheduling details coming soon.</Text>
-      <Text>
-        Note that the excursions are optional! Feel free to go explore on your own or visit other
-        countries after the wedding, but we would love to have you join us and spend time together.
-      </Text>
+      <Title order={1}>Itinerary</Title>
+      <Text className={classes.note}>More scheduling details coming soon.</Text>
       <Group justify="center" className={classes.mainInfo}>
         <Title order={2}>November 21</Title>
         <Divider orientation="vertical" />
@@ -32,7 +28,17 @@ export default function ItineraryPage() {
         <Title order={2}>Wedding Ceremony</Title>
       </Group>
 
-      <Group justify="center" className={classes.mainInfo}>
+      <Divider orientation="horizontal" />
+      <Title order={1}>Excursions</Title>
+      <Text className={classes.note}>
+        Note that the excursions are optional! Feel free to go explore on your own or visit other
+        countries after the wedding, but we would love to have you join us and spend time together.
+      </Text>
+      <Text>
+        We are currently in the midst of planning the excursions for November 24 and 25. Details
+        will be coming out once we further finalize the event through email.
+      </Text>
+      {/* <Group justify="center" className={classes.mainInfo}>
         <Title order={2}>November 24</Title>
         <Divider orientation="vertical" />
         <Title order={2}>Excursion 1 (TBD)</Title>
@@ -41,7 +47,11 @@ export default function ItineraryPage() {
         <Title order={2}>November 25</Title>
         <Divider orientation="vertical" />
         <Title order={2}>Excursion 2: Lantern Festival</Title>
-      </Group>
+        <Text>
+          As tickets tend to sell out very quickly, please let us know asap if you would like to
+          attend, so that we could purchase the tickets.
+        </Text>
+      </Group> */}
 
       {/* <Stack>
         <Stack>
