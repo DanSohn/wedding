@@ -17,15 +17,15 @@ export default function ItineraryPage() {
       <Title order={1}>Itinerary</Title>
       <Text className={classes.note}>More scheduling details coming soon.</Text>
       <Group justify="center" className={classes.mainInfo}>
-        <Title order={2}>November 21</Title>
+        <Title order={3}>November 21</Title>
         <Divider orientation="vertical" />
-        <Title order={2}>Welcome Party</Title>
+        <Title order={3}>Welcome Party</Title>
       </Group>
 
       <Group justify="center" className={classes.mainInfo}>
-        <Title order={2}>November 23</Title>
+        <Title order={3}>November 23</Title>
         <Divider orientation="vertical" />
-        <Title order={2}>Wedding Ceremony</Title>
+        <Title order={3}>Wedding Ceremony</Title>
       </Group>
 
       <Image src="drinks.jpg" alt="Drinks" radius="md" fit="cover" className={classes.image} />
