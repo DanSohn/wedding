@@ -1,4 +1,4 @@
-import { Divider, Group, Text, Title } from '@mantine/core';
+import { Divider, Group, Image, Text, Title } from '@mantine/core';
 import classes from './itinerary.module.css';
 
 // const EventCard = ({ children }: { children: React.ReactNode }) => (
@@ -28,16 +28,21 @@ export default function ItineraryPage() {
         <Title order={2}>Wedding Ceremony</Title>
       </Group>
 
-      <Divider orientation="horizontal" />
+      <Image src="drinks.jpg" alt="Drinks" radius="md" fit="cover" className={classes.image} />
+
       <Title order={1}>Excursions</Title>
       <Text className={classes.note}>
-        Note that the excursions are optional! Feel free to go explore on your own or visit other
-        countries after the wedding, but we would love to have you join us and spend time together.
+        Note that all excursions are completely optional. You're more than welcome to explore on
+        your own, relax, or even continue your travels to other parts of Thailand (or beyond!) after
+        the wedding. That said, we'd absolutely love for you to join us and spend some extra time
+        together if you can.
       </Text>
       <Text>
-        We are currently in the midst of planning the excursions for November 24 and 25. Details
-        will be coming out once we further finalize the event through email.
+        We're currently working with a travel agency to finalize excursion plans for November 24 and
+        25. Once details are confirmed, we'll share all the information via email as soon as
+        possible so you can plan your trip with ease.
       </Text>
+
       {/* <Group justify="center" className={classes.mainInfo}>
         <Title order={2}>November 24</Title>
         <Divider orientation="vertical" />

@@ -45,7 +45,8 @@ const faqItems = [
       },
       {
         question: 'Can I bring a plus one?',
-        answer: 'Please check your invitation — if your guest’s name is included, then yes!',
+        answer:
+          'Please check your invitation — if your guest’s name is included, then yes! If you’re unsure, feel free to reach out to us directly.',
       },
       {
         question: 'Are there any vaccinations that I need to get before traveling to Thailand?',

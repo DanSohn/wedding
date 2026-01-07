@@ -1,14 +1,14 @@
-import { Image, Text } from '@mantine/core';
+import { Container, Image, Text } from '@mantine/core';
 import classes from './home.module.css';
 
 function HomePage() {
   return (
-    <div className={classes.page}>
+    <Container size="sm" className={classes.page}>
       <Text className={classes.gratefulText}>
         We want to take this opportunity to express our appreciation and gratitude for you. Whether
-        you have been here since day 1 of our journey or our new friends, we want to say thank you
-        for showing up and supporting us. It would mean the world to both of us for you to be there
-        on our special day and we cannot wait to celebrate with you!
+        you have been here since day 1 of our journey or joined us somewhere along the way, we want
+        to say thank you for showing up and supporting us. It would mean the world to both of us for
+        you to be there on our special day and we cannot wait to celebrate with you!
       </Text>
       <Text className={classes.gratefulText}>
         Please explore our wedding website for logistics, lodging, FAQs, travel details and more.
@@ -25,7 +25,7 @@ function HomePage() {
         radius="md"
         fit="cover"
       />
-    </div>
+    </Container>
   );
 }
 

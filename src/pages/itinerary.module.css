@@ -21,3 +21,10 @@
 .mainInfo {
   padding: 48px 0;
 }
+
+.image {
+  margin-top: 32px;
+  margin-bottom: 32px;
+  height: 300px;
+  flex-basis: auto;
+}

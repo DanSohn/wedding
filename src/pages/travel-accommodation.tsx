@@ -16,6 +16,11 @@ const faqItems = [
           'We recommend booking flights at least 6–8 months in advance to get the best fares and options.',
       },
       {
+        question: 'When should I arrive to Chiang Mai?',
+        answer:
+          'We recommend arriving by November 20th to attend the welcome party and have ample time to settle in before the wedding day. (Jetlag will be rough)',
+      },
+      {
         question: 'Which airport should I fly into?',
         answer:
           'The closest major airport is Chiang Mai International Airport (CNX). From there, you can take a taxi to the city, or rent a scooter if you’re adventurous!',
