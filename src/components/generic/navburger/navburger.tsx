@@ -36,7 +36,6 @@ function NavBurger() {
     >
       <Menu.Target>
         <Burger
-          size="sm"
           aria-label="Toggle navigation menu"
           classNames={{
             root: classes.burger,
