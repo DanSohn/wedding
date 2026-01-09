@@ -42,11 +42,17 @@ enum WeddingEvents {
 }
 
 const defaultValues = {
+  fullName: '',
+  email: '',
+  isAttending: Attendance.Yes,
+  isBringingGuest: IsBringingGuest.No,
   events: [WeddingEvents.Ceremony_And_Reception],
+  dietaryRestrictions: '',
+  comments: '',
 };
 
 export default function RsvpForm() {
-  const { control, handleSubmit, watch } = useForm<Inputs>({
+  const { control, handleSubmit, watch, reset } = useForm<Inputs>({
     defaultValues,
   });
 
@@ -54,6 +60,7 @@ export default function RsvpForm() {
 
   const showConditionalGuestFields = watch('isBringingGuest') === IsBringingGuest.Yes;
   const showFullForm = watch('isAttending') === Attendance.Yes;
+  const disableSubmit = watch('fullName') === '' || watch('email') === '';
 
   const validateFormData = (data: Inputs) => {
     let hasError = false;
@@ -103,21 +110,17 @@ export default function RsvpForm() {
     };
 
     const queryParams = new URLSearchParams(payload).toString();
-    console.log('RSVP payload', payload);
     try {
       setIsSubmitting(true);
-      const res = await fetch(
+      await fetch(
         `https://script.google.com/macros/s/AKfycbyS6IhLv-tifG_0YLgyEC9y88Mk-UT43h5OM_1pZ23IG09mFiVkTEIPrdHRL3fP1RGNvQ/exec?${queryParams}`,
         {
           method: 'POST',
-          // body: JSON.stringify(payload),
         },
       );
-      const resData = await res.json();
-      console.log('RSVP res', resData);
+      reset(defaultValues);
       toast.success('Form submitted successfully!');
-    } catch (err) {
-      console.error('Error submitting RSVP:', err);
+    } catch (_error) {
       toast.error('There was an error submitting the form. Text Daniel that he sucks at his job');
     } finally {
       setIsSubmitting(false);
@@ -266,12 +269,6 @@ export default function RsvpForm() {
                         disabled
                         size="md"
                       />
-                      {/* <Checkbox value={WeddingEvents.Excursion_One} label="Excursion 1" size="md" />
-                      <Checkbox
-                        value={WeddingEvents.LanternFestival}
-                        label="Lantern Festival"
-                        size="md"
-                      /> */}
                     </Stack>
                   </Checkbox.Group>
                 )}
@@ -305,7 +302,7 @@ export default function RsvpForm() {
             )}
           />
 
-          <Button type="submit" loading={isSubmitting}>
+          <Button type="submit" loading={isSubmitting} disabled={disableSubmit}>
             Submit
           </Button>
         </Stack>
