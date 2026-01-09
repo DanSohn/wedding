@@ -1,5 +1,6 @@
 import { Group } from '@mantine/core';
 
+import { useLocation } from 'react-router';
 import classes from './navbar.module.css';
 
 type Link = {
@@ -19,8 +20,14 @@ const links: Link[] = [
 ];
 
 function NavBar() {
+  const location = useLocation();
+  console.log('location: ', location.pathname);
   const navItems = links.map((link) => (
-    <a className={classes.navItem} href={link.link} key={link.link}>
+    <a
+      className={location.pathname === link.link ? classes.current : classes.navItem}
+      href={link.link}
+      key={link.link}
+    >
       {link.label}
     </a>
   ));
