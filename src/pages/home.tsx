@@ -1,9 +1,11 @@
 import { Container, Image, Text } from '@mantine/core';
+import Countdown from '../components/generic/countdown/countdown';
 import classes from './home.module.css';
 
 function HomePage() {
   return (
     <Container size="sm" className={classes.page}>
+      <Countdown />
       <Text className={classes.gratefulText}>
         We want to take this opportunity to express our appreciation and gratitude for you. Whether
         you have been here since day 1 of our journey or joined us somewhere along the way, we want
