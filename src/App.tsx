@@ -1,4 +1,4 @@
-import { createTheme, MantineProvider } from '@mantine/core';
+import { Burger, createTheme, MantineProvider } from '@mantine/core';
 import { BrowserRouter } from 'react-router';
 import classes from './App.module.css';
 import Footer from './components/generic/footer/footer';
@@ -10,6 +10,17 @@ import Router from './router';
 const theme = createTheme({
   fontFamily: 'Abhaya Libre, serif',
   defaultRadius: 'md',
+  components: {
+    Burger: Burger.extend({
+      vars: () => {
+        return {
+          root: {
+            '--burger-color': '#a58475',
+          },
+        };
+      },
+    }),
+  },
 });
 
 export default function App() {

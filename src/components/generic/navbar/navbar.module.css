@@ -5,6 +5,12 @@
   background-color: #fff5f0;
 }
 
+@media only screen and (max-width: 720px) {
+  .navbar {
+    display: none;
+  }
+}
+
 .navItem {
   margin: 0 1rem;
   font-size: 1.2rem;
