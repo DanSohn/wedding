@@ -15,11 +15,21 @@
 }
 
 .question {
-  margin-bottom: 24px;
+  margin-bottom: 36px;
 }
 
 .title {
   justify-content: center;
   text-align: center;
   font-size: 28px;
+}
+
+.table th,
+.table td {
+  text-align: center;
+}
+
+.discountCode {
+  /* font-weight: bold; */
+  background-color: var(--mantine-color-blue-2);
 }
